@@ -10,7 +10,7 @@ const About = () => {
       ref={ref}
       className={`transition-opacity duration-[1500ms] ease-in-out ${
         isVisible ? 'opacity-100' : 'opacity-0'
-      } py-20 px-4 bg-gradient-to-br from-[#8758ff] via-[#b084f7] to-[#ffafe0] text-white`}
+      } py-20 px-4 bg-gradient-to-br from-[#8798ff] via-[#b084f7] to-[#ffafe0] text-white`}
     >
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
         
