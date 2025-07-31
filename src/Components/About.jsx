@@ -18,7 +18,7 @@ const About = () => {
         <motion.img
           src={profileImg}
           alt="Assumpta"
-          className="w-72 h-72 object-cover rounded-full shadow-lg border-4 border-white"
+          className="w-90 h-8 object-cover rounded-full shadow-lg border-4 border-white"
           initial={{ y: -200, opacity: 0 }}
           animate={isVisible ? { y: 0, opacity: 1 } : {}}
           transition={{ duration: 1.5, type: 'spring' }}
