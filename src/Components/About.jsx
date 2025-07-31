@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
-import useInViewFade from '../hooks/useInViewFade';
-import profileImg from '../assets/profile.jpg'; // replace with your image path
+import useInViewFade from './hooks/useInViewFade';
+import profileImg from '../assets/profile-1.png'
 
 const About = () => {
   const [ref, isVisible] = useInViewFade();
