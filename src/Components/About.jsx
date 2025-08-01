@@ -5,7 +5,7 @@ import profileImg from '../assets/profile-1.png'
 
 const About = () => {
   return (
-    <div className='mb-'>
+    <div className='p-4'>
 
     </div>
   )
