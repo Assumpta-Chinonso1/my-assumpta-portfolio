@@ -1,64 +1,50 @@
-import { motion } from 'framer-motion';
-import useInViewFade from './hooks/useInViewFade';
-import profileImg from '../assets/profile-1.png'; // Use the correct path to your image
+import React from "react";
+import { motion } from "framer-motion"
+import briImage from '../assets/profile-1.png'
 
-const About = () => {
-  const [ref, isVisible] = useInViewFade();
-
+const AboutSection = () => {
   return (
-    <section
-      ref={ref}
-      className={`transition-opacity duration-[1500ms] ease-in-out ${
-        isVisible ? 'opacity-100' : 'opacity-0'
-      } py-28 px-6 md:px-20 bg-[#0f0f0f] text-gray-100`}
-    >
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
-        
-        {/* Text Content */}
-        <motion.div
-          className="space-y-6 z-10"
-          initial={{ opacity: 0, x: -50 }}
-          animate={isVisible ? { opacity: 1, x: 0 } : {}}
-          transition={{ duration: 1.2 }}
-        >
-          <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight">
-            Hey, I'm Assumpta 💫
-          </h2>
-          <p className="text-xl text-gray-300 leading-relaxed">
-            I’m a design-minded, detail-oriented <span className="text-purple-400 font-semibold">frontend developer</span> passionate about combining beautiful code with beautiful design.
-          </p>
+    <section className="min-h-screen flex flex-col-reverse md:flex-row items-center justify-between px-6 md:px-20 py-16 gap-12 bg-white">
+      {/* Left Side - Text */}
+      <motion.div
+        className="w-full md:w-1/2"
+        initial={{ opacity: 0, x: -50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8 }}
+      >
+        <h1 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
+          Hey, I'm Brittany.
+        </h1>
+        <p className="text-lg text-gray-700 leading-relaxed mb-4">
+          I'm a design-minded, detail-oriented software engineer passionate about combining beautiful code with beautiful design.
+        </p>
+        <p className="text-lg text-gray-700 leading-relaxed mb-4">
+          I'm a fourth year student at Northeastern University in Boston studying computer science and interaction design. I have experience developing and designing software for the web, from simple landing pages to progressive web applications. I strive to create software that not only functions efficiently under the hood, but also provides intuitive, pixel-perfect user experiences.
+        </p>
+        <p className="text-lg text-gray-700 leading-relaxed mb-4">
+          I love learning new and better ways to create seamless user experiences with clean, efficient, and scalable code. I consider work an ongoing education, and I'm always looking for opportunities to work with those who are willing to share their knowledge as much as I want to learn.
+        </p>
+        <p className="text-lg text-gray-700 leading-relaxed">
+          When I'm not in front of a computer screen, I'm probably snowboarding, traveling, petting dogs, or learning a new song on my uke.
+        </p>
+      </motion.div>
 
-          <hr className="w-20 border-t-4 border-[#00ffff] rounded" />
-
-          <p className="text-lg text-gray-300 leading-relaxed">
-            I’ve got hands-on experience using <strong>React</strong>, <strong>TailwindCSS</strong>, and <strong>Framer Motion</strong> to craft fast, responsive, and scalable user interfaces. From smooth landing pages to interactive web apps, I focus on both form and function.
-          </p>
-
-          <p className="text-lg text-gray-300 leading-relaxed">
-            I believe in building intuitive, accessible experiences — and I’m especially passionate about tech for empowerment, particularly for women and underserved communities.
-          </p>
-
-          <p className="text-lg text-gray-300 leading-relaxed">
-            When I’m not writing code, I’m brainstorming ideas, reading, or spending time with family — and always learning something new.
-          </p>
-        </motion.div>
-
-        {/* Image Content */}
-        <motion.div
-          className="w-full flex justify-center md:justify-end"
-          initial={{ opacity: 0, y: -60 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 1.3, type: 'spring' }}
-        >
-          <img
-            src={profileImg}
-            alt="Assumpta"
-            className="w-[280px] h-[280px] md:w-[340px] md:h-[340px] rounded-full object-cover border-4 border-white shadow-2xl"
-          />
-        </motion.div>
-      </div>
+      {/* Right Side - Image */}
+      <motion.div
+        className="w-full md:w-1/2 flex justify-center items-center"
+        initial={{ opacity: 0, x: 50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8 }}
+      >
+        <img
+          src={briImage}
+          alt="Brittany Chiang"
+          className="rounded-full w-72 h-72 object-cover shadow-lg"
+        />
+      </motion.div>
     </section>
   );
 };
 
-export default About;
+export default AboutSection;
+
