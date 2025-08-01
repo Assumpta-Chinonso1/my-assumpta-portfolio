@@ -22,7 +22,7 @@ const About = () => {
           transition={{ duration: 1.2 }}
         >
           <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-gray-900 leading-tight">
-            Meet Assumpta 💫
+            Meet Assumpta 
           </h2>
           <p className="text-lg md:text-xl leading-relaxed tracking-wide text-gray-700">
             I'm <span className="text-[#8758ff] font-semibold">Assumpta Chinonso</span>, a frontend developer with a love for crafting beautiful and intuitive web experiences.
